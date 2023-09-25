@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+       html{height:100%}
+
+    body{height:100%;margin:0px;padding:0px}
+
+    #container{height:100%}
+
+</style>
+	<script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=3TPCSnuaMqYz2A20zXHXGsaZrG7Q5WWw"></script>
+	<title>地图展示</title>
+</head>
+<body>
+	<div id="container"></div>
+</body>
+</html>
+<script type="text/javascript">
+    // GL版命名空间为BMapGL
+    // 按住鼠标右键，修改倾斜角和角度
+	var map = new BMapGL.Map("container");    // 创建Map实例
+	map.centerAndZoom(new BMapGL.Point(117.078115728003, 36.6721433229127), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
